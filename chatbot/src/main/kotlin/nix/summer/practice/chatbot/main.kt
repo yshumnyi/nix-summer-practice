@@ -1,12 +1,11 @@
 package nix.summer.practice.chatbot
 
-import java.lang.Math
-
 
 fun main() {
     greetings_bot()
     greetings_user()
     guess_age()
+    to_positive_number()
 }
 
 fun greetings_bot () {
@@ -31,4 +30,12 @@ fun guess_age() {
 
     val age = ( a * 70 + b * 21 + c * 15) % 105
     println("Your age is $age; that's a good time to start programming!")
+}
+
+fun to_positive_number(){
+    println("I will prove to you that I can count to any number you want:")
+    val x = readLine()?.toInt()!!
+    for (n in 1..x) {
+        println("$n !")
+    }
 }
