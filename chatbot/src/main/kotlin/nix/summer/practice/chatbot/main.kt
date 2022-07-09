@@ -2,26 +2,27 @@ package nix.summer.practice.chatbot
 
 
 fun main() {
-    greetings_bot()
-    greetings_user()
-    guess_age()
-    to_positive_number()
+    greetingsBot()
+    greetingsUser()
+    guessAge()
+    toPositiveNumber()
+    test()
+    ending()
 }
 
-fun greetings_bot () {
-    val bot_name = "Ken"
-    val year_of_creating = "2022"
-    println("Hello! My name is $bot_name. I was created in $year_of_creating")
+fun greetingsBot () {
+    val botName = "Ken"
+    val yearOfCreating = "2022"
+    println("Hello! My name is $botName. I was created in $yearOfCreating")
 }
 
-fun greetings_user(){
+fun greetingsUser(){
     print("Please, remind me your name.\n What a great name you have, ")
-    val user_name= readLine()
-    println("What a great name you have, $user_name!")
+    val userName= readLine()
+    println("What a great name you have, $userName!")
 }
 
-fun guess_age() {
-//    var age: Int
+fun guessAge() {
     println("Let me guess your age.")
     println("Enter remainders of dividing your age by 3, 5 and 7.")
     val a = readLine()?.toInt()!!
@@ -32,10 +33,28 @@ fun guess_age() {
     println("Your age is $age; that's a good time to start programming!")
 }
 
-fun to_positive_number(){
+fun toPositiveNumber(){
     println("I will prove to you that I can count to any number you want:")
     val x = readLine()?.toInt()!!
-    for (n in 1..x) {
+    for (n in 0..x) {
         println("$n !")
     }
+}
+
+fun test(){
+    println("Modularity criteria include?")
+    println("1. continuity ")
+    println("2. the only choice")
+    println("3. unified access")
+    println("4. weak connectivity of interfaces")
+    var answer  = readLine()
+    while (answer != "1"){
+        println("Please, try again.")
+        answer  = readLine()
+    }
+println("Great, you right!")
+}
+
+fun ending(){
+    println("Goodbye, have a nice day!")
 }
